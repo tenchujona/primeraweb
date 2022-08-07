@@ -8,3 +8,5 @@ class Products(models.Model):
     image = models.ImageField(upload_to='product', null=True, blank=True)
     SKU = models.CharField(max_length=30, unique=True, blank=True, null=True)
     active = models.BooleanField(default=True)
+    def __str__(self):
+        return self.name
