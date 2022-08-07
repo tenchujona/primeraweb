@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from datetime import datetime
+from django.shortcuts import render
 
 def saludo(request):
     return HttpResponse('Hola buenas tardes!')
@@ -18,3 +19,6 @@ def fecha_actual(request):
     fecha = datetime.now().date()
     mensaje = f'Hoy es {fecha}'
     return HttpResponse(mensaje)
+
+def probando_template(request):
+    return render(request, 'template.html', context = {})
