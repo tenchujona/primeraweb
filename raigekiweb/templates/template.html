@@ -8,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hola esta es la pagina loca</h1>
+<h1>Hola {{nombre}} {{apellido}}</h1>
+
+<h2>
+    {% for fruta in frutas%}
+    {{fruta}}<br>
+    {% endfor %}
+</h2>
 </body>
 </html>
