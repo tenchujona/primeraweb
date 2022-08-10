@@ -15,16 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from raigekiweb.views import saludo, tienda, index, nosotros, fecha_actual, probando_template
-from product.views import products
+from raigekiweb.views import index, probando_template
+
 urlpatterns = [
     path('', index, name = 'home'),
     path('admin/', admin.site.urls),
-    path('saludo/', saludo, name = 'saludo'),
-    path('tienda/', tienda, name = 'tienda'),
-    path('index/', index, name = 'home'),
-    path('nosotros/', nosotros, name = 'nosotros'),
-    path('fechadehoy/', fecha_actual, name = 'fecha'),
     path('probandotemplate/', probando_template, name = 'probandotemplate'),
-    path('products/', include('product.urls'))
+    path('products/', include('product.urls')) #busca las urls de productos en el archivo urls.py de product
 ]
