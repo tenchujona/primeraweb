@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from products.models import Products
+from product.models import Products
 
 # Create your views here.
 def products(request):
-
-    context = {}
+    productos = Products.objects.all()
+    context = {'productos':productos}
     return render(request, 'productos.html', context=context)

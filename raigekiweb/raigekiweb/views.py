@@ -9,8 +9,8 @@ def saludo(request):
 def tienda(request):
     return HttpResponse('Esta es la tienda')
 
-def despedida(request):
-    return HttpResponse('Hasta luego gracias por visitar nuestra web')
+def index(request):
+    return render(request, 'index.html')
 
 def nosotros(request):
     return HttpResponse('Pagina acerca de nosotros')
