@@ -5,4 +5,4 @@ from product.models import Products
 def products(request):
     productos = Products.objects.all()
     context = {'productos':productos}
-    return render(request, 'productos.html', context=context)
+    return render(request, 'shop.html', context=context)
